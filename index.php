@@ -1,20 +1,30 @@
 <?php
 // AD-Draft-Finals/index.php
 
-// Dahil ang router.php ang nagsisimula at naglo-load ng bootstrap.php,
-// available na ang APP_ROOT dito.
-// Hindi mo na kailangang i-include ang bootstrap.php nang direkta dito.
+// Required to load APP_ROOT
+require_once __DIR__ . '/bootstrap.php'; // bootstrap.php is in the same directory
 
-// Define variables for main.layout.php
-$pageTitle = "Welcome to AD-Draft-Finals";
-$content = "
+// Variables for CSS/JS
+$globalCss = "/assets/css/style.css"; // Global CSS
+$globalJs = "/assets/js/script.js";   // Global JS
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to AD-Draft-Finals</title>
+    <link rel="stylesheet" href="<?php echo htmlspecialchars($globalCss); ?>">
+    <link rel="icon" href="/assets/img/outlast_favicon.png" type="image/png">
+</head>
+<body class="dark-theme">
+
     <div style='text-align: center; padding: 50px; color: var(--color-light-gray);'>
         <h1>Welcome to Outlast Shop!</h1>
         <p>Explore our post-apocalyptic supplies and survive the apocalypse!</p>
         <p><a href='/shop' style='color: var(--color-red-accent); font-weight: bold; text-decoration: underline;'>Go to Shop</a></p>
     </div>
-";
 
-// Include the main layout to render the page
-include APP_ROOT . '/layout/main.layout.php';
-?>
+    <script src="<?php echo htmlspecialchars($globalJs); ?>"></script>
+</body>
+</html>

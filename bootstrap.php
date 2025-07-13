@@ -18,7 +18,7 @@ error_reporting(E_ALL);
 // require_once APP_ROOT . '/utils/name.utils.php';
 
 // Include static data (e.g., product data)
-// Ito ang mahalaga para makita ang $products array
+// ITO ANG MAHALAGA para makita ang $products array at getProductById() function
 require_once APP_ROOT . '/staticData/products.staticdata.php';
 
 // Start session if needed (important for cart functionality)

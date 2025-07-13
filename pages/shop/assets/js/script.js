@@ -8,14 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailPanelHeader = document.getElementById('detail-panel-header');
 
     // Store the initial HTML of the detail panel for resetting
+    // Note: This relies on the productDetail.component.php's initial output for "SELECT PRODUCT"
+    // If it's empty, you might need a static placeholder div or default content here.
     const initialDetailHtml = detailPanel.innerHTML;
 
     // Function to update the detail panel with product data
     function updateProductDetailPanel(product) {
         if (!product) {
             // Reset to initial state if no product is provided
+            // This assumes initialDetailHtml captures the default "SELECT PRODUCT" component state
             detailPanelHeader.textContent = "PRODUCT VIEW";
-            detailPanel.innerHTML = initialDetailHtml;
+            detailPanel.innerHTML = initialDetailHtml; // Revert to initial state
             return;
         }
 
@@ -76,13 +79,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Event listener for product card clicks
-    productCards.forEach(card => {
-        card.addEventListener('click', () => {
+    // Re-select productCards after filtering, or use event delegation
+    // For now, this will attach to initially loaded cards.
+    // If content changes dynamically, you might need to re-attach or use delegation
+    // Better to use event delegation on a parent that doesn't change for clicks:
+    document.querySelector('.product-grid').addEventListener('click', (event) => {
+        const card = event.target.closest('.product-card');
+        if (card) {
             const productId = card.dataset.productId;
             console.log(`Product clicked: ${productId}`);
             fetchProductDetails(productId);
-        });
+        }
     });
+
 
     // Event listener for category tabs
     const tabButtons = document.querySelectorAll('.tab-button');

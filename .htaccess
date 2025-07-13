@@ -1,0 +1,15 @@
+# AD-Draft-Finals/.htaccess
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Base directory for your project relative to the web root (htdocs)
+    # IMPORTANT: Baguhin ito kung ang folder ng iyong project ay hindi direktang nasa htdocs
+    # Halimbawa: kung nasa C:\xampp\htdocs\my_projects\AD-Draft-Finals, gawing /my_projects/AD-Draft-Finals/
+    RewriteBase /AD-Draft-Finals/
+
+    # If the requested file or directory does NOT exist,
+    # then rewrite the request to router.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ router.php [L]
+</IfModule>

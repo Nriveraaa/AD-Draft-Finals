@@ -23,7 +23,7 @@ ob_start();
 
                 if (!empty($initialProducts)) {
                     foreach ($initialProducts as $product) {
-                        // Path for productCard.component.php (already updated)
+                        // UPDATED PATH:
                         include APP_ROOT . '/components/componentGroup/productCard.component.php';
                     }
                 } else {
@@ -48,11 +48,11 @@ ob_start();
             if ($defaultDetailProduct) {
                 // Temporarily set $selectedProduct for productDetail.component.php
                 $selectedProduct = $defaultDetailProduct;
-                // UPDATED PATH HERE:
+                // UPDATED PATH:
                 include APP_ROOT . '/components/componentGroup/productDetail.component.php';
             } else {
                 // Fallback if the specific product isn't found
-                // UPDATED PATH HERE:
+                // UPDATED PATH:
                 include APP_ROOT . '/components/componentGroup/productDetail.component.php'; // Will use its own default
             }
             ?>

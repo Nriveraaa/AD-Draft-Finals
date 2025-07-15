@@ -1,5 +1,5 @@
 {
-    "name": "nicole/ad-draft-finals",
+    "name": "nriveraaa/ad-draft-finals",
     "autoload": {
         "psr-4": {
             "Nicole\\AdDraftFinals\\": "src/"

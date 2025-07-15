@@ -1,21 +1,20 @@
-<?php 
-require_once '../../layout/main.layout.php';
-require_once '../../components/componentGroup/productCard.component.php';
-require_once '../../staticDatas/products.staticdata.php';
+<?php
+require_once APP_ROOT . '/bootstrap.php';
+require_once APP_ROOT . '/layout/main.layout.php';
+require_once APP_ROOT . '/components/componentGroup/productCard.component.php';
 
-$products = getProducts(); // from static data
+$products = getProducts(); // from staticData
 ?>
 
-<link rel="stylesheet" href="assets/css/outlast.css">
-<script src="assets/js/outlast.js" defer></script>
+<link rel="stylesheet" href="/pages/shop/assets/css/outlast.css">
+<script src="/pages/shop/assets/js/outlast.js" defer></script>
 
 <div class="main-container">
   <header class="navbar">
     <h1 class="logo">OUTLAST</h1>
     <nav>
-      <a href="#" class="active">HOME</a>
-      <a href="#">SHOP</a>
-      <a href="#">CATEGORIES</a>
+      <a href="/" class="">HOME</a>
+      <a href="/shop" class="active">SHOP</a>
     </nav>
     <div class="icons">🔍 🛒 👤</div>
   </header>
@@ -28,7 +27,7 @@ $products = getProducts(); // from static data
     </div>
 
     <div class="product-detail">
-      <img src="assets/img/smoke.webp" alt="Red Smoke">
+      <img src="/pages/shop/assets/img/smoke.webp" alt="Red Smoke">
       <h2>STOCK <span>$195</span></h2>
       <p>POWER LEVEL:</p>
       <ul>
@@ -39,3 +38,6 @@ $products = getProducts(); // from static data
     </div>
   </div>
 </div>
+
+</body>
+</html>

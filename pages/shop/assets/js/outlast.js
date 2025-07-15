@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll(".product-card");
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      alert("Product clicked!");
+  const cards = document.querySelectorAll(".product-card");
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      alert(`You clicked on: ${card.querySelector('p').textContent}`);
     });
   });
 });

@@ -3,6 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Outlast Shop</title>
-  <link rel="icon" href="/assets/img/favicon.png">
+  <link rel="stylesheet" href="/pages/home/assets/css/outlast.css">
 </head>
 <body>

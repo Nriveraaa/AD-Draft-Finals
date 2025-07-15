@@ -1,14 +1,15 @@
 {
     "name": "nicole/ad-draft-finals",
-    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Nicole\\AdDraftFinals\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "nriveraaa",
             "email": "202310167@fit.edu.ph"
         }
     ],
-    "scripts": {
-        "start": "php -S localhost:8000 router.php"
-    },
     "require": {}
 }

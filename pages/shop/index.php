@@ -1,9 +1,9 @@
 <?php
-require_once APP_ROOT . '/bootstrap.php';
 require_once APP_ROOT . '/layout/main.layout.php';
 require_once APP_ROOT . '/components/componentGroup/productCard.component.php';
+require_once APP_ROOT . '/staticData/products.staticdata.php';
 
-$products = getProducts(); // from staticData
+$products = getProducts();
 ?>
 
 <link rel="stylesheet" href="/pages/shop/assets/css/outlast.css">

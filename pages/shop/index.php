@@ -6,8 +6,8 @@ require_once APP_ROOT . '/staticData/products.staticdata.php';
 $products = getProducts();
 ?>
 
-<link rel="stylesheet" href="/pages/shop/assets/css/outlast.css">
-<script src="/pages/shop/assets/js/outlast.js" defer></script>
+<link rel="stylesheet" href="/AD-Draft-Finals/pages/shop/assets/css/outlast.css">
+<script src="/AD-Draft-Finals/pages/shop/assets/js/outlast.js" defer></script>
 
 <div class="main-container">
   <header class="navbar">
